@@ -1,0 +1,58 @@
+{
+  "entities": {
+    "ContentPlanItem": {
+      "title": "ContentPlanItem",
+      "description": "Represents an individual planned content item with execution todos and post-evaluation data.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "title": { "type": "string", "maxLength": 300 },
+        "pillar": { "type": "string", "maxLength": 50 },
+        "format": { "type": "string", "maxLength": 50 },
+        "platform": { "type": "string", "maxLength": 50 },
+        "goal": { "type": "string", "maxLength": 50 },
+        "targetAudience": { "type": "string", "maxLength": 500 },
+        "scheduledDate": { "type": "string", "maxLength": 20 },
+        "scheduledTime": { "type": "string", "maxLength": 20 },
+        "hook": { "type": "string", "maxLength": 1000 },
+        "captionScript": { "type": "string", "maxLength": 10000 },
+        "callToAction": { "type": "string", "maxLength": 500 },
+        "hashtags": { "type": "array" },
+        "assetLinks": { "type": "string", "maxLength": 1000 },
+        "stage": { "type": "string", "maxLength": 20 },
+        "status": { "type": "string", "maxLength": 30 },
+        "todos": { "type": "array" },
+        "evaluation": { "type": "object" },
+        "userId": { "type": "string", "maxLength": 128 },
+        "createdAt": { "type": "string", "maxLength": 50 },
+        "updatedAt": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["id", "title", "pillar", "stage", "userId"]
+    },
+    "BrandSettings": {
+      "title": "BrandSettings",
+      "description": "User brand configuration, niche, target audience persona, and team members.",
+      "type": "object",
+      "properties": {
+        "brandName": { "type": "string", "maxLength": 200 },
+        "niche": { "type": "string", "maxLength": 200 },
+        "targetAudienceDescription": { "type": "string", "maxLength": 1000 },
+        "toneOfVoice": { "type": "string", "maxLength": 300 },
+        "teamMembers": { "type": "array" },
+        "userId": { "type": "string", "maxLength": 128 },
+        "updatedAt": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["brandName", "userId"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}/content_plans/{contentId}": {
+      "schema": "ContentPlanItem",
+      "description": "Stores user content plans, execution checklist, and evaluation results."
+    },
+    "/users/{userId}/brand_settings/{settingsId}": {
+      "schema": "BrandSettings",
+      "description": "Stores user brand strategy settings and team members."
+    }
+  }
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        try {
+          var currentFetch = window.fetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() { return currentFetch; },
+            set: function(val) { currentFetch = val; },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          // ignore if already defined
+        }
+
+        // Prevent uncaught error event from bubbling if a third-party script attempts fetch assignment
+        window.addEventListener('error', function(event) {
+          if (event && event.message && event.message.indexOf('Cannot set property fetch of') !== -1) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            return true;
+          }
+        }, true);
+      })();
+    </script>
+    <title>PlanCraft Studio - Sistem Konten Terpadu</title>
+    <meta name="description" content="Aplikasi perencanaan konten lengkap dengan generator ide AI, to-do list eksekusi terintegrasi, dan evaluasi performa." />
+    <meta property="og:title" content="PlanCraft Studio - Sistem Konten Terpadu" />
+    <meta property="og:description" content="Aplikasi perencanaan konten lengkap dengan generator ide AI, to-do list eksekusi terintegrasi, dan evaluasi performa." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body class="font-['Plus_Jakarta_Sans',sans-serif] bg-slate-950 text-slate-100 antialiased selection:bg-indigo-500/30 selection:text-indigo-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

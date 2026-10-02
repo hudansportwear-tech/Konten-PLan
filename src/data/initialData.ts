@@ -1,0 +1,274 @@
+import { ContentPlanItem, BrandSettings } from '../types/content';
+
+export const DEFAULT_BRAND_SETTINGS: BrandSettings = {
+  brandName: 'Hudan Active & Sportswear',
+  niche: 'Activewear, Sportswear & Healthy Lifestyle',
+  targetAudienceDescription: 'Gen Z dan Milenial usia 20-35 tahun, gemar lari, gym, padel, dan menyukai pakaian olahraga nyaman & stylish.',
+  toneOfVoice: 'Energik, memotivasi, santai, edukatif, dan estetis',
+  teamMembers: [
+    { id: '1', name: 'Rian (Scriptwriter)', role: 'Scriptwriter' },
+    { id: '2', name: 'Alina (Graphic Designer)', role: 'Graphic Designer' },
+    { id: '3', name: 'Dimas (Videographer & Editor)', role: 'Videographer' },
+    { id: '4', name: 'Maya (Social Media Specialist)', role: 'Social Media' },
+    { id: '5', name: 'Hudan (Creative Director)', role: 'Creative Director' },
+  ],
+  defaultPlatforms: ['Instagram', 'TikTok', 'YouTube'],
+};
+
+export const INITIAL_CONTENT_ITEMS: ContentPlanItem[] = [
+  // 1. KONTEN (Tahap Perencanaan Ide & Draft)
+  {
+    id: 'cnt-101',
+    title: '5 Kesalahan Fatal Memilih Bahan Jersey Olahraga Saat Cuaca Terik',
+    pillar: 'Edukasi',
+    format: 'Carousel',
+    platform: 'Instagram',
+    goal: 'Edukasi Pasar',
+    targetAudience: 'Pelari pemula & pehobi gym yang sering merasa gerah dan gatal saat berolahraga',
+    scheduledDate: '2026-10-06',
+    scheduledTime: '19:00',
+    hook: 'Jangan beli jersey murah kalau masih pakai bahan ini di siang bolong! 🥵',
+    captionScript: `Slide 1: Cover dengan perbandingan kain katun biasa vs Dry-Fit Micro Poly.
+Slide 2: Kesalahan 1 - Memakai serat kain yang menahan keringat (bikin lepek & berat).
+Slide 3: Kesalahan 2 - Mengabaikan sirkulasi mesh di area ketiak dan punggung.
+Slide 4: Kesalahan 3 - Bahan yang luntur dan iritasi ke kulit.
+Slide 5: Solusi teknologi 4-way stretch & anti-odor.
+Slide 6: CTA - Simpan postingan ini sebelum belanja outfit olahraga akhir pekan nanti!`,
+    callToAction: 'Komen "MAU" untuk link panduan memilih jersey anti-bau!',
+    hashtags: ['#TipsOlahraga', '#JerseyLari', '#TipsFashionPria', '#ActivewearIndonesia', '#RunningTips'],
+    assetLinks: 'https://drive.google.com/drive/folders/sample-jersey-tips',
+    stage: 'konten',
+    status: 'Approved',
+    todos: [
+      { id: 'td-1', title: 'Riset 3 bahan kain sintetis paling adem', phase: 'Riset & Naskah', pic: 'Rian (Scriptwriter)', completed: true, dueDate: '2026-10-03' },
+      { id: 'td-2', title: 'Buat copywriting slide 1-6 dan teks cover', phase: 'Riset & Naskah', pic: 'Rian (Scriptwriter)', completed: true, dueDate: '2026-10-04' },
+      { id: 'td-3', title: 'Foto makro tekstur kain jersey di studio', phase: 'Produksi Visual', pic: 'Dimas (Videographer & Editor)', completed: false, dueDate: '2026-10-04' },
+      { id: 'td-4', title: 'Desain layout carousel 1080x1350 Canva/Figma', phase: 'Editing & Aset', pic: 'Alina (Graphic Designer)', completed: false, dueDate: '2026-10-05' },
+      { id: 'td-5', title: 'Proofreading caption & cek hashtag', phase: 'Review & Approval', pic: 'Maya (Social Media Specialist)', completed: false, dueDate: '2026-10-05' },
+      { id: 'td-6', title: 'Jadwalkan postingan Meta Business Suite jam 19.00', phase: 'Distribusi & Publish', pic: 'Maya (Social Media Specialist)', completed: false, dueDate: '2026-10-06' },
+    ],
+    evaluation: {
+      targetViews: 12000,
+      actualViews: 0,
+      targetLikes: 800,
+      actualLikes: 0,
+      targetSaves: 450,
+      actualSaves: 0,
+      actualComments: 0,
+      actualShares: 0,
+      verdict: 'Belum Dievaluasi',
+      whatWorked: '',
+      whatNeedsImprovement: '',
+      nextActionPlan: '',
+    },
+    createdAt: '2026-10-01T10:00:00Z',
+    updatedAt: '2026-10-02T08:00:00Z',
+  },
+
+  // 2. EKSEKUSI (Tahap Sedang Berjalan Produksi / Syuting / Editing)
+  {
+    id: 'cnt-102',
+    title: 'Behind The Scenes: Uji Coba Ketahanan Baju Gym Ditarik 50 Kg!',
+    pillar: 'Behind the Scenes',
+    format: 'Short Video (Reels/TikTok)',
+    platform: 'TikTok',
+    goal: 'Brand Awareness',
+    targetAudience: 'Komunitas calisthenics, powerlifter, dan gym enthusiasts yang cari baju awet',
+    scheduledDate: '2026-10-04',
+    scheduledTime: '12:30',
+    hook: 'Katanya jahitan baju lokal gampang robek? Mari kita buktikan di depan barbell! 💥',
+    captionScript: `Detik 0-3: Close up barbel 50kg diikat ke lengan baju Hudan Pro Series.
+Detik 4-10: Tim gym mencoba mengangkat barbel pakai pegangan kain baju.
+Detik 11-18: Ekspresi kaget ketika jahitan flatlock tetap kokoh dan kain melar kembali sempurna.
+Detik 19-25: Penjelasan teknologi benang nilon ganda.
+Detik 26-30: "Yakin masih mau beli yang gampang jebol pas squat? Cek keranjang kuning sekarang!"`,
+    callToAction: 'Tap link di bio untuk klaim diskon pre-order edisi Pro Series!',
+    hashtags: ['#GymTok', '#BajuGym', '#FitnessIndonesia', '#BehindTheScenes', '#LocalPride'],
+    assetLinks: 'https://drive.google.com/drive/folders/bts-uji-ketahanan',
+    stage: 'eksekusi',
+    status: 'In Production',
+    todos: [
+      { id: 'td-201', title: 'Buat storyboard dan siapkan beban barbel 50kg', phase: 'Riset & Naskah', pic: 'Rian (Scriptwriter)', completed: true, dueDate: '2026-10-01' },
+      { id: 'td-202', title: 'Syuting take uji coba tarikan di gym partner', phase: 'Produksi Visual', pic: 'Dimas (Videographer & Editor)', completed: true, dueDate: '2026-10-02' },
+      { id: 'td-203', title: 'Editing video cepat: sound effect dramatic + subtitle warna neon', phase: 'Editing & Aset', pic: 'Dimas (Videographer & Editor)', completed: true, dueDate: '2026-10-03' },
+      { id: 'td-204', title: 'Cek musik trending bebas copyright di TikTok', phase: 'Review & Approval', pic: 'Maya (Social Media Specialist)', completed: false, dueDate: '2026-10-03' },
+      { id: 'td-205', title: 'Review kesesuaian klaim oleh Creative Director', phase: 'Review & Approval', pic: 'Hudan (Creative Director)', completed: false, dueDate: '2026-10-04' },
+      { id: 'td-206', title: 'Upload & pasang keranjang kuning / link bio jam 12.30 siang', phase: 'Distribusi & Publish', pic: 'Maya (Social Media Specialist)', completed: false, dueDate: '2026-10-04' },
+    ],
+    evaluation: {
+      targetViews: 35000,
+      actualViews: 0,
+      targetLikes: 2500,
+      actualLikes: 0,
+      targetSaves: 600,
+      actualSaves: 0,
+      actualComments: 0,
+      actualShares: 0,
+      verdict: 'Belum Dievaluasi',
+      whatWorked: '',
+      whatNeedsImprovement: '',
+      nextActionPlan: '',
+    },
+    createdAt: '2026-09-30T14:00:00Z',
+    updatedAt: '2026-10-02T09:15:00Z',
+  },
+
+  // 3. EVALUASI (Tahap Sudah Publish dan Dianalisis Kinerjanya)
+  {
+    id: 'cnt-103',
+    title: 'POV: Pas Kamu Baru Sadar Teman Lari Kamu Ternyata Pacer 4:00 🏃💨',
+    pillar: 'Hiburan',
+    format: 'Short Video (Reels/TikTok)',
+    platform: 'Instagram',
+    goal: 'Engagement & Komunitas',
+    targetAudience: 'Pelari kasual dan komunitas run club di seluruh kota besar',
+    scheduledDate: '2026-09-28',
+    scheduledTime: '17:45',
+    hook: '"Kita lari santai ya bro, easy run aja..." 10 menit kemudian: 💀',
+    captionScript: `Siapa yang sering kena jebakan 'easy run' begini? Tag temen lari kalian yang bilangnya pace 7 tau-taunya ngajak race! 😂
+Outfit: Hudan AeroVent Short & Singlet Neon. Ringan banget gak berasa nempel di kulit pas ngos-ngosan ngejar pacer!`,
+    callToAction: 'Tag 1 temen lari kamu yang paling sering bohong soal pace!',
+    hashtags: ['#RunningHumor', '#LariPagi', '#RunClubID', '#PacerLari', '#Relatable'],
+    assetLinks: 'https://instagram.com/p/sample-reels-runner',
+    stage: 'evaluasi',
+    status: 'Published',
+    todos: [
+      { id: 'td-301', title: 'Draft konsep komedi relatable komunitas lari', phase: 'Riset & Naskah', pic: 'Rian (Scriptwriter)', completed: true, dueDate: '2026-09-26' },
+      { id: 'td-302', title: 'Syuting saat Car Free Day minggu pagi', phase: 'Produksi Visual', pic: 'Dimas (Videographer & Editor)', completed: true, dueDate: '2026-09-27' },
+      { id: 'td-303', title: 'Cut to cut dinamis dengan audio meme viral', phase: 'Editing & Aset', pic: 'Dimas (Videographer & Editor)', completed: true, dueDate: '2026-09-27' },
+      { id: 'td-304', title: 'Review & approval caption', phase: 'Review & Approval', pic: 'Hudan (Creative Director)', completed: true, dueDate: '2026-09-28' },
+      { id: 'td-305', title: 'Publish tepat jam bubar kantor & balas 30 komentar awal', phase: 'Distribusi & Publish', pic: 'Maya (Social Media Specialist)', completed: true, dueDate: '2026-09-28' },
+    ],
+    evaluation: {
+      publishDate: '2026-09-28',
+      postUrl: 'https://instagram.com/reel/hudan-easy-run',
+      targetViews: 20000,
+      actualViews: 48500,
+      targetLikes: 1500,
+      actualLikes: 3820,
+      targetSaves: 300,
+      actualSaves: 890,
+      actualComments: 284,
+      actualShares: 1420,
+      actualClicks: 195,
+      engagementRate: 13.2,
+      verdict: 'Melebihi Target',
+      whatWorked: 'Hook POV sangat relate dengan komunitas runner. CTA "Tag teman" menghasilkan viral share loop lebih dari 1.400 kali.',
+      whatNeedsImprovement: 'Tautan produk di bio tidak dipasang bitly khusus pelacak klik, sehingga konversi ke penjualan langsung kurang terlacak akurat.',
+      nextActionPlan: 'Buat seri kedua edisi "Tipe-Tipe Teman di Gym" dengan format serupa minggu depan, gunakan tautan UTM khusus.',
+      aiAnalysis: {
+        verdict: 'Sangat Sukses',
+        scoreOutOf100: 94,
+        engagementAnalysis: 'Rasio share mencapai 2.9% dari total views, menandakan kekuatan konten emosional/humor yang memicu perbincangan organik di grup WhatsApp & DM komunitas lari.',
+        keyStrengths: [
+          'Viral hook dengan relatable pain point pelari kasual',
+          'Tingginya user generated engagement dari mention/tag',
+          'Soft-selling produk terselip secara natural tanpa kesan hard selling kaku'
+        ],
+        bottlenecks: [
+          'Kurangnya link tracking UTM untuk mengukur direct sale attribution'
+        ],
+        nextContentRecommendations: [
+          'Produksi lanjutan serial "Mitos Easy Run Part 2"',
+          'Gunakan sound original yang sama untuk meningkatkan brand recall',
+          'Kolaborasi dengan salah satu run influencer ternama untuk versi remix Reels'
+        ],
+        analyzedAt: '2026-09-29T10:00:00Z'
+      }
+    },
+    createdAt: '2026-09-25T08:00:00Z',
+    updatedAt: '2026-09-29T10:00:00Z',
+  },
+
+  // 4. KONTEN (Promosi Peluncuran Koleksi Baru)
+  {
+    id: 'cnt-104',
+    title: 'Peluncuran Koleksi Terbaru: Hudan StormBreaker Windrunner',
+    pillar: 'Promosi',
+    format: 'Short Video (Reels/TikTok)',
+    platform: 'Instagram',
+    goal: 'Penjualan Langsung',
+    targetAudience: 'Pelari malam hari, commuter bersepeda, pecinta jaket fungsional',
+    scheduledDate: '2026-10-09',
+    scheduledTime: '20:00',
+    hook: 'Satu jaket buat hujan deras, angin malam, dan nongkrong di cafe? Ini dia! 🌧️⚡',
+    captionScript: `Inovasi terbaru dari Hudan Activewear: StormBreaker Jacket.
+✔️ Ultra lightweight (hanya 180 gram)
+✔️ Water repellent grade 4
+✔️ Reflective strip 360 derajat untuk keamanan lari malam
+✔️ Bisa dilipat seukuran saku dompet!
+
+Khusus 50 pembeli pertama malam ini ada potongan voucher Rp 50.000 + free sling bag tahan air!`,
+    callToAction: 'Klik link bio atau ketik "STORMBREAKER" di DM untuk klaim voucher spesial!',
+    hashtags: ['#JaketLari', '#Windrunner', '#ActivewearPria', '#OOTDSporty', '#PromoTerbatas'],
+    assetLinks: 'https://drive.google.com/drive/folders/stormbreaker-launch',
+    stage: 'konten',
+    status: 'Draft',
+    todos: [
+      { id: 'td-401', title: 'Finalisasi USP produk & penawaran promo', phase: 'Riset & Naskah', pic: 'Hudan (Creative Director)', completed: true, dueDate: '2026-10-04' },
+      { id: 'td-402', title: 'Pembuatan naskah video cinematic launch', phase: 'Riset & Naskah', pic: 'Rian (Scriptwriter)', completed: false, dueDate: '2026-10-05' },
+      { id: 'td-403', title: 'Syuting outdoor malam hari dengan efek semprotan air & lampu motor', phase: 'Produksi Visual', pic: 'Dimas (Videographer & Editor)', completed: false, dueDate: '2026-10-06' },
+      { id: 'td-404', title: 'Color grading cinematic teal & orange + audio sfx hujan', phase: 'Editing & Aset', pic: 'Dimas (Videographer & Editor)', completed: false, dueDate: '2026-10-07' },
+      { id: 'td-405', title: 'Setup automasi pesan DM Instagram via chatbot', phase: 'Distribusi & Publish', pic: 'Maya (Social Media Specialist)', completed: false, dueDate: '2026-10-08' },
+    ],
+    evaluation: {
+      targetViews: 25000,
+      actualViews: 0,
+      targetLikes: 1800,
+      actualLikes: 0,
+      targetSaves: 500,
+      actualSaves: 0,
+      actualComments: 0,
+      actualShares: 0,
+      verdict: 'Belum Dievaluasi',
+      whatWorked: '',
+      whatNeedsImprovement: '',
+      nextActionPlan: '',
+    },
+    createdAt: '2026-10-01T15:30:00Z',
+    updatedAt: '2026-10-02T06:00:00Z',
+  }
+];
+
+const STORAGE_KEY_CONTENT = 'plancraft_content_items_v1';
+const STORAGE_KEY_BRAND = 'plancraft_brand_settings_v1';
+
+export function loadSavedContent(): ContentPlanItem[] {
+  try {
+    const data = localStorage.getItem(STORAGE_KEY_CONTENT);
+    if (data) {
+      return JSON.parse(data);
+    }
+  } catch (e) {
+    console.error('Failed to load content from localStorage', e);
+  }
+  return INITIAL_CONTENT_ITEMS;
+}
+
+export function saveContent(items: ContentPlanItem[]): void {
+  try {
+    localStorage.setItem(STORAGE_KEY_CONTENT, JSON.stringify(items));
+  } catch (e) {
+    console.error('Failed to save content to localStorage', e);
+  }
+}
+
+export function loadSavedBrandSettings(): BrandSettings {
+  try {
+    const data = localStorage.getItem(STORAGE_KEY_BRAND);
+    if (data) {
+      return JSON.parse(data);
+    }
+  } catch (e) {
+    console.error('Failed to load brand settings', e);
+  }
+  return DEFAULT_BRAND_SETTINGS;
+}
+
+export function saveBrandSettings(settings: BrandSettings): void {
+  try {
+    localStorage.setItem(STORAGE_KEY_BRAND, JSON.stringify(settings));
+  } catch (e) {
+    console.error('Failed to save brand settings', e);
+  }
+}

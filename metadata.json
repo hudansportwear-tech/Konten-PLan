@@ -1,0 +1,7 @@
+{
+  "name": "PlanCraft Studio - Sistem Konten Terpadu",
+  "description": "Aplikasi perencanaan konten lengkap dengan generator ide AI, to-do list eksekusi terintegrasi, dan evaluasi performa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
